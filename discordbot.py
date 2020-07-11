@@ -1,21 +1,14 @@
-from discord.ext import commands
-import os
-import traceback
+# 誰かがメッセージをポストしたとき
+@client.event
+async def on_message(message):
 
-bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
+    # ボットのメッセージは無視
+    # 問答無用で無限ループ抑えるのがお作法らしい
+    if message.author.bot:
+        return
 
+    # /fizz と入力されたら、buzz とこたえる
+    if message.content == '/fizz':
+        await message.channel.send('buzz')
 
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
-
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-
-bot.run(token)
+    await message.channel.send(message.author.name + 'が語るぞ')
