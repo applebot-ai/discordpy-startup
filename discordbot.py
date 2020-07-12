@@ -32,8 +32,8 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 @bot.command()
-async def builds(ctx):
-    await ctx.send('https://tt2-compendium.com/en/builds')
+async def ping(ctx):
+    await ctx.send('pong')
 
 bot.run(token)
 
