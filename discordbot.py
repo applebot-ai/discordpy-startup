@@ -14,11 +14,12 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send('ponpoko')
+
+bot.run(token)
 
 @bot.command()
 async def builds(ctx):
     await ctx.send('https://tt2-compendium.com/en/builds')
-    
 
 bot.run(token)
