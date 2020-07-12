@@ -17,7 +17,7 @@ async def ping(ctx):
     await ctx.send('pong')
 
 @bot.command()
-async def ビルド(ctx):
+async def builds(ctx):
     await ctx.send('https://tt2-compendium.com/en/builds')
     
 
