@@ -20,8 +20,20 @@ async def ping(ctx):
     await ctx.send('pong')
 
 @bot.command()
-async def builds(ctx):
-    await ctx.send('https://tt2-compendium.com/en/builds')    
+async def scb(ctx):
+    await ctx.send('https://tt2-compendium.com/en/builds/sc')    
+
+@bot.command()
+async def hsb(ctx):
+    await ctx.send('https://tt2-compendium.com/en/builds/hs')   
+
+@bot.command()
+async def csb(ctx):
+    await ctx.send('https://tt2-compendium.com/en/builds/cs')   
+
+@bot.command()
+async def petb(ctx):
+    await ctx.send('https://tt2-compendium.com/en/builds/pet')       
     
 bot.run(token)
 
