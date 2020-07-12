@@ -12,8 +12,8 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 @bot.command()
-async def neko(ctx):
-    await ctx.send('わんわん')
+async def ping(ctx):
+    await ctx.send('まだこれだけ')
 
 bot.run(token)
 
