@@ -13,11 +13,28 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def peke(ctx):
-    await ctx.send('pon（まだこれだけ）')
+    await ctx.send('pon')
 
 bot.run(token)
 
 
+from discord.ext import commands
+import os
+import traceback
 
+bot = commands.Bot(command_prefix="!")
+token = os.environ['DISCORD_BOT_TOKEN']
+
+@bot.event
+async def on_command_error(ctx, error):
+    orig_error = getattr(error, "original", error)
+    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
+    await ctx.send(error_msg)
+
+@bot.command()
+async def builds(ctx):
+    await ctx.send('https://tt2-compendium.com/en/builds')
+
+bot.run(token)
 
 
