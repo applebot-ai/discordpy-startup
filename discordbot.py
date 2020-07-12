@@ -13,7 +13,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def peke(ctx):
-    await ctx.send('pon')
+    await ctx.send('ponpon')
 
 bot.run(token)
 
