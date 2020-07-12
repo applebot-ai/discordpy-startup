@@ -12,8 +12,8 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('まだこれだけ')
+async def peke(ctx):
+    await ctx.send('pon（まだこれだけ）')
 
 bot.run(token)
 
