@@ -34,6 +34,10 @@ async def csb(ctx):
 @bot.command()
 async def petb(ctx):
     await ctx.send('https://tt2-compendium.com/en/builds/pet')       
+
+@bot.command()
+async def raid(ctx):
+    await ctx.send('https://docs.google.com/spreadsheets/d/166QB9bVQE37K8KdnITG_cu-_cvi8iE78EFIWemdJ6X0/edit#gid=736827398')     
     
 bot.run(token)
 
