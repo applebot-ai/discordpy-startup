@@ -40,7 +40,7 @@ async def raid(ctx):
     await ctx.send('https://docs.google.com/spreadsheets/d/166QB9bVQE37K8KdnITG_cu-_cvi8iE78EFIWemdJ6X0/edit#gid=736827398')     
 
 @bot.command()
-async def card(ctx):
+async def decks(ctx):
     await ctx.send('https://docs.google.com/spreadsheets/d/18vZdCWrcXAQKEraoSDWVFnT_jwk84iXEs6uAAPQ9OM0/edit')     
    
 
